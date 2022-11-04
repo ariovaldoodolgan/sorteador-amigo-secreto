@@ -1,7 +1,28 @@
+import React, { useRef, useState } from "react";
+import { useAddParticipant } from "../../state/hooks/useAddParticipant";
+
 const Form = () => {
-    return(<form>
-        <input type="text" placeholder="Insira os nomes dos participantes" />
-        <button disabled={true}>Adicionar</button>
+    const [name, setName] = useState('');
+
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    const addToList = useAddParticipant()
+
+    const addParticipant = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        addToList(name);
+        setName("");
+        inputRef.current?.focus();
+    };
+
+    return (<form onSubmit={addParticipant}>
+        <input
+            ref={inputRef}
+            value={name}
+            onChange={event => setName(event.target.value)}
+            type="text" 
+            placeholder="Insira os nomes dos participantes" />
+        <button disabled={!name}>Add</button>
     </form>)
 }
 
