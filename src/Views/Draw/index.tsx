@@ -34,6 +34,7 @@ const Draw = () => {
                         value={currentParticipant}
                         onChange={event => setCurrentParticipant(event.target.value)}
                     >
+                        <option>Select your name</option>
                         {participants.map(item => <option key={item}>{item}</option>)}
                     </select>
                     <p>Click in Sort to see who is your secret friend!</p>
