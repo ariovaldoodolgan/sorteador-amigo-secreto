@@ -39,7 +39,7 @@ describe('At draw page', () => {
         )
 
         const options = screen.queryAllByRole('option');
-        expect(options).toHaveLength(participants.length)
+        expect(options).toHaveLength(participants.length + 1)
     });
 
     test('the secret friend is revealed when ask for', () => {
