@@ -2,15 +2,15 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 import { act } from "react-dom/test-utils";
 import { RecoilRoot } from "recoil";
-import Form from ".";
+import FormCustom from ".";
 
-describe("The Form.tsx behavior", () => {
+describe("The FormCustom.tsx behavior", () => {
     // Jest
     test("when input is empty, it won't be able to add new participants", () => {
 
         render(
             <RecoilRoot>
-                <Form />
+                <FormCustom />
             </RecoilRoot>
         );
 
@@ -31,7 +31,7 @@ describe("The Form.tsx behavior", () => {
 
         render(
             <RecoilRoot>
-                <Form />
+                <FormCustom />
             </RecoilRoot>
         );
 
@@ -48,7 +48,7 @@ describe("The Form.tsx behavior", () => {
             }
         })
 
-        // submit form
+        // submit FormCustom
         fireEvent.click(button);
 
         // Garante that the input is focused
@@ -62,7 +62,7 @@ describe("The Form.tsx behavior", () => {
 
         render(
             <RecoilRoot>
-                <Form />
+                <FormCustom />
             </RecoilRoot>
         );
 
@@ -96,7 +96,7 @@ describe("The Form.tsx behavior", () => {
         jest.useFakeTimers();
         render(
             <RecoilRoot>
-                <Form />
+                <FormCustom />
             </RecoilRoot>
         );
 

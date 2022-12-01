@@ -1,6 +1,6 @@
 import Card from "../../components/Card";
 import Footer from "../../components/Footer";
-import Form from "../../components/Form";
+import FormCustom from "../../components/FormCustom";
 import ParticipantList from "../../components/ParticipantList";
 
 const Configuration = () => {
@@ -9,7 +9,7 @@ const Configuration = () => {
         <Card>
             <section>
                 <h2>Let's start!</h2>
-                <Form />
+                <FormCustom />
                 <ParticipantList />
                 <Footer />
             </section>
