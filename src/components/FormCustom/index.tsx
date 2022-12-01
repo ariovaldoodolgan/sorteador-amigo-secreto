@@ -3,7 +3,7 @@ import { useAddParticipant } from "../../state/hooks/useAddParticipant";
 import { useErrorMessage } from "../../state/hooks/useErrorMessage";
 import "./styles.scss";
 
-const Form = () => {
+const FormCustom = () => {
     const [name, setName] = useState('');
 
     const inputRef = useRef<HTMLInputElement>(null);
@@ -33,4 +33,4 @@ const Form = () => {
     </form>)
 }
 
-export default Form;
+export default FormCustom;

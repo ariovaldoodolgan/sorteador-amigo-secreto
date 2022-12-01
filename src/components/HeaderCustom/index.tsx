@@ -1,6 +1,6 @@
 import "./styles.scss";
 
-const Header = () => {
+const HeaderCustom = () => {
     return (
         <header className="header">
             <div className="image-logo" role="img" aria-label="Application's logo"></div>
@@ -9,4 +9,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default HeaderCustom;
